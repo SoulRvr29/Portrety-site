@@ -1,0 +1,15 @@
+tr,
+td,
+th {
+  border: 2px solid var(--light-accent);
+  text-align: center;
+}
+
+td,
+th {
+  padding: 1rem;
+}
+
+td {
+  opacity: 0.8;
+}
