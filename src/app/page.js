@@ -8,9 +8,9 @@ import Contact from "./sections/Contact";
 
 export default function Page() {
   return (
-    <main className="pb-10 flex flex-col gap-10">
+    <main className="pb-20 flex flex-col gap-10">
       <Element name="Główna">
-        <h1 className="font-caveat text-center p-20 max-w-4xl mx-auto">
+        <h1 className="font-caveat text-center p-10 max-w-4xl mx-auto max-md:text-2xl">
           Sunt quis optio laudantium maxime eos harum illo, itaque perferendis
           quisquam facilis.
         </h1>

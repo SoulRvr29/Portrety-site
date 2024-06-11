@@ -5,6 +5,7 @@ import "./css/tables.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import GoUp from "./components/GoUp";
+import "react-photo-view/dist/react-photo-view.css";
 
 const lato = Lato({
   subsets: ["latin"],

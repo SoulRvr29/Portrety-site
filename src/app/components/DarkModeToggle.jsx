@@ -3,7 +3,9 @@ import { useState, useEffect } from "react";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 const DarkModeToggle = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(
+    localStorage.getItem("theme") === "dark" ? true : false
+  );
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -25,21 +27,26 @@ const DarkModeToggle = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       if (darkMode) {
-        document.documentElement.classList.add("dark");
         localStorage.setItem("theme", "dark");
+        document.documentElement.classList.add("dark");
       } else {
         document.documentElement.classList.remove("dark");
         localStorage.setItem("theme", "light");
       }
     }
   }, [darkMode]);
+
   return (
     <button
       onClick={() => setDarkMode(!darkMode)}
       title={!darkMode ? "ciemny motyw" : "jasny motyw"}
       className="hover:brightness-150"
     >
-      {darkMode ? <MdDarkMode /> : <MdLightMode />}
+      {darkMode ? (
+        <MdDarkMode className="size-5 max-sm:size-6" />
+      ) : (
+        <MdLightMode className="size-5 max-sm:size-6" />
+      )}
     </button>
   );
 };

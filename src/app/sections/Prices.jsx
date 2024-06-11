@@ -11,8 +11,8 @@ const Prices = () => {
         Quas, eum voluptatibus enim culpa beatae voluptates soluta, sint amet
         aliquam nulla libero, cupiditate consectetur velit?
       </p>
-      <table className="table-auto border-2 border-light-accent dark:border-dark-accent text-3xl mx-auto uppercase font-bold">
-        <thead className="text-xl">
+      <table className="table-auto border-2 border-light-accent dark:border-dark-accent text-3xl mx-auto uppercase font-bold ">
+        <thead className="text-xl max-sm:text-xs">
           <tr>
             <th>format</th>
             <th>1 osoba</th>

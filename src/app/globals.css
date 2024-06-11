@@ -59,3 +59,32 @@ p {
 /* main > div {
   border: 1px solid red;
 } */
+
+@media (max-width: 768px) {
+  .nav-hide {
+    animation: hide-anim 1s forwards;
+  }
+}
+@media (max-width: 768px) {
+  .nav-show {
+    animation: show-anim 1s forwards;
+  }
+}
+
+@keyframes hide-anim {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-400px);
+  }
+}
+
+@keyframes show-anim {
+  from {
+    transform: translateY(-400px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
