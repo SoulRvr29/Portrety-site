@@ -26,6 +26,7 @@ const DarkModeToggle = () => {
         document.documentElement.classList.remove("dark");
       }
     }
+    console.log(darkMode);
   }, []);
 
   useEffect(() => {

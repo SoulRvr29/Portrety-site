@@ -1,12 +1,20 @@
 "use client";
 import { Element } from "react-scroll";
-
 import Gallery from "./sections/Gallery";
 import Order from "./sections/Order";
 import Prices from "./sections/Prices";
 import Contact from "./sections/Contact";
+import { motion, useInView } from "framer-motion";
+import { useRef, useEffect } from "react";
 
 export default function Page() {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
+  useEffect(() => {
+    console.log("Element is in view: ", isInView);
+  }, [isInView]);
+
   return (
     <main className="pb-20 flex flex-col gap-10">
       <Element name="Główna">
@@ -16,7 +24,9 @@ export default function Page() {
         </h1>
       </Element>
       <Gallery />
-      <Prices />
+      <motion.div>
+        <Prices />
+      </motion.div>
       <Order />
       <Contact />
     </main>

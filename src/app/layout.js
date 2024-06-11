@@ -2,6 +2,8 @@ import { Lato, Caveat } from "next/font/google";
 import "./globals.css";
 import "./css/scrollbar.css";
 import "./css/tables.css";
+import "./css/loader.css";
+import "./css/gallery.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import GoUp from "./components/GoUp";

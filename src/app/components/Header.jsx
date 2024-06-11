@@ -25,7 +25,7 @@ const NavLi = ({ name, setMenuOpen }) => {
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <header className="sticky z-10 opacity-95 top-0 p-3 text-xl flex items-center justify-between dark:bg-dark-bkg bg-light-text text-light-bkg dark:text-dark-accent  ">
+    <header className="sticky z-10 opacity-95 top-0 p-3 text-xl flex items-center justify-between dark:bg-dark-bkg bg-light-text text-light-bkg dark:text-light-bkg  ">
       <div className="font-bold font-pacifico max-md:pb-1">name/logo.pl</div>
 
       <div className="flex items-center gap-4">

@@ -1,0 +1,23 @@
+@media (max-width: 768px) {
+  .PhotoView-Slider__BannerRight svg {
+    scale: 2;
+  }
+
+  .PhotoView-Slider__Counter {
+    font-size: 1.4rem !important;
+  }
+  .PhotoView-Slider__ArrowLeft svg,
+  .PhotoView-Slider__ArrowRight svg {
+    scale: 1.5;
+    padding: 0.3rem !important;
+  }
+}
+
+.PhotoView-Slider__BannerWrap {
+  background: none !important;
+}
+
+.PhotoView-Slider__BannerRight,
+.PhotoView-Slider__Counter {
+  background: rgba(0, 0, 0, 0.3);
+}
