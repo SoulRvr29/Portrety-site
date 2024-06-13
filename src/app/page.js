@@ -8,17 +8,17 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
 
 export default function Page() {
-  const ref = useRef(null);
-  const isInView = useInView(ref);
+  // const ref = useRef(null);
+  // const isInView = useInView(ref);
 
-  useEffect(() => {
-    console.log("Element is in view: ", isInView);
-  }, [isInView]);
+  // useEffect(() => {
+  //   console.log("Element is in view: ", isInView);
+  // }, [isInView]);
 
   return (
-    <main className="pb-20 flex flex-col gap-10">
+    <main className=" pb-20 max-sm:pb-8 px-8 max-sm:px-4 flex flex-col gap-10 max-sm:gap-4">
       <Element name="Główna">
-        <h1 className="font-caveat text-center p-10 max-w-4xl mx-auto max-md:text-2xl">
+        <h1 className="font-caveat text-center max-w-4xl mx-auto max-md:text-2xl pt-10 max-sm:pt-4">
           Sunt quis optio laudantium maxime eos harum illo, itaque perferendis
           quisquam facilis.
         </h1>

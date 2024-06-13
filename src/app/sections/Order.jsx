@@ -4,7 +4,7 @@ const Order = () => {
   return (
     <Element name="Jak zamawiać">
       <h2>Jak zamawiać</h2>
-      <ul className="list-disc list-inside px-4 max-w-3xl mx-auto font-semibold flex flex-col gap-2">
+      <ul className="list-disc list-inside max-w-3xl mx-auto font-semibold flex flex-col gap-2">
         <li>
           Prześlij wybrane zdjęcie (lub kilka zdjęć) i napisz ewentualne uwagi
           na adres: jchudecka@op.pl. Fotografia powinna być w jak najlepszej

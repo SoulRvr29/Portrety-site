@@ -2,7 +2,7 @@ import React from "react";
 import { Element } from "react-scroll";
 const Prices = () => {
   return (
-    <Element name="Cennik">
+    <Element name="Cennik" className="max-w-6xl mx-auto">
       <h2>Cennik</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum animi

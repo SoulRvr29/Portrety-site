@@ -25,38 +25,40 @@ const NavLi = ({ name, setMenuOpen }) => {
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <header className="sticky z-10 opacity-95 top-0 p-3 text-xl flex items-center justify-between dark:bg-dark-bkg bg-light-text text-light-bkg dark:text-light-bkg  ">
-      <div className="font-bold font-pacifico max-md:pb-1">name/logo.pl</div>
+    <header className="sticky z-10 opacity-95 top-0 p-3 text-xl  dark:bg-dark-bkg bg-light-text text-light-bkg dark:text-light-bkg ">
+      <div className="flex items-center justify-between max-w-6xl mx-auto">
+        <div className="font-bold font-pacifico max-md:pb-1">portrety.pl</div>
 
-      <div className="flex items-center gap-4">
-        <nav
-          className={
-            "main-nav flex justify-center items-center font-semibold gap-x-4 gap-y-1 flex-wrap max-md:hiddenn max-md:flex-col max-md:fixed max-md:top-0 max-md:left-0 max-md:w-screen max-md:bg-light-text max-md:gap-0 " +
-            (menuOpen ? " nav-show" : " nav-hide")
-          }
-        >
-          <NavLi setMenuOpen={setMenuOpen} name="Główna" />
-          <NavLi setMenuOpen={setMenuOpen} name="Galeria" />
-          <NavLi setMenuOpen={setMenuOpen} name="Cennik" />
-          <NavLi setMenuOpen={setMenuOpen} name="Jak zamawiać" />
-          <NavLi setMenuOpen={setMenuOpen} name="Kontakt" />
-        </nav>
-        <DarkModeToggle />
-        {menuOpen ? (
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="z-20 hidden max-md:grid h-10 w-10 place-content-center hover:brightness-150"
+        <div className="flex items-center gap-4 max-sm:gap-2">
+          <nav
+            className={
+              "main-nav flex justify-center items-center font-semibold gap-x-4 gap-y-1 flex-wrap max-md:hiddenn max-md:flex-col max-md:fixed max-md:top-0 max-md:left-0 max-md:w-screen max-md:bg-light-text max-md:gap-0 " +
+              (menuOpen ? " nav-show" : " nav-hide")
+            }
           >
-            <IoIosClose size={60} />
-          </button>
-        ) : (
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="z-20 hidden max-md:grid h-10 w-10 place-content-center hover:brightness-150"
-          >
-            <IoIosMenu size={40} />
-          </button>
-        )}
+            <NavLi setMenuOpen={setMenuOpen} name="Główna" />
+            <NavLi setMenuOpen={setMenuOpen} name="Galeria" />
+            <NavLi setMenuOpen={setMenuOpen} name="Cennik" />
+            <NavLi setMenuOpen={setMenuOpen} name="Jak zamawiać" />
+            <NavLi setMenuOpen={setMenuOpen} name="Kontakt" />
+          </nav>
+          <DarkModeToggle />
+          {menuOpen ? (
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="z-20 hidden max-md:grid h-10 w-10 place-content-center hover:brightness-150"
+            >
+              <IoIosClose size={60} />
+            </button>
+          ) : (
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="z-20 hidden max-md:grid h-10 w-10 place-content-center hover:brightness-150"
+            >
+              <IoIosMenu size={40} />
+            </button>
+          )}
+        </div>
       </div>
     </header>
   );

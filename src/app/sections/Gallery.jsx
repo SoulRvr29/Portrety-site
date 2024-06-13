@@ -83,11 +83,12 @@ const Gallery = () => {
         </button>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-4 px-8 max-sm:px-12">
+      <div className="flex flex-wrap justify-center gap-4 max-sm:px-4 ">
         <PhotoProvider
           maskOpacity={0.7}
           maskClassName="backdrop-blur-sm"
           loadingElement={<div className="loader"></div>}
+          key={srcFull}
         >
           {srcThumb.map((item, index) => (
             <div key={index}>
@@ -102,7 +103,7 @@ const Gallery = () => {
                     alt={"thumbnail " + index}
                     width={300}
                     height={300}
-                    className="h-[20rem] w-auto cursor-pointer shadow-lg border-4 border-light-accent dark:border-dark-accent dark:hover:border-dark-accent-2 hover:border-light-accent-3 transition-all hover:scale-105 hover:-rotate-1 hover:-translate-y-1 max-sm:w-screen max-sm:h-auto"
+                    className="h-[20rem] w-auto cursor-pointer shadow-lg border-4  border-light-accent dark:border-dark-accent dark:hover:border-dark-accent-2 hover:border-light-accent-3 transition-all hover:scale-105 hover:-rotate-1 hover:-translate-y-1 max-sm:w-screen max-sm:h-auto"
                   />
                 </motion.div>
               </PhotoView>

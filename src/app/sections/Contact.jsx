@@ -44,7 +44,7 @@ const Contact = () => {
     <Element name="Kontakt">
       <h2>Kontakt</h2>
       <div className="flex max-md:flex-col max-w-md mx-auto justify-center text-3xl max-sm:text-xl gap-8 p-8 max-sm:p-4">
-        <div className="flex justify-center items-center border-2 rounded-xl py-2 pl-3 border-light-text dark:border-dark-accent max-sm:w-fit mx-auto">
+        <div className="flex justify-center items-center border-2 rounded-xl py-2 px-3 border-light-text dark:border-dark-accent max-sm:w-fit mx-auto">
           <FaPhone size={50} className="max-sm:size-7" />
           <p className="m-0 text-nowrap">(+48) 574 511 037</p>
         </div>
@@ -89,9 +89,8 @@ const Contact = () => {
           onChange={handleChange}
           rows="5"
         ></textarea>
-        <input className="sr-only" type="file" name="file" id="file" />
         <div className="flex items-start justify-between ">
-          <label
+          {/* <label
             htmlFor="file-upload"
             className="flex items-center gap-1 font-semibold border-2 rounded-md p-1  text-light-text dark:text-dark-text bg-light-accent-2 dark:bg-dark-bkg bg-opacity-60 border-light-accent dark:border-dark-accent hover:bg-light-accent hover:text-light-accent-2 hover:border-light-accent-2 dark:hover:bg-dark-text dark:hover:text-dark-accent dark:hover:border-dark-accent transition-colors cursor-pointer "
           >
@@ -99,6 +98,7 @@ const Contact = () => {
 
             <span>Dodaj zdjęcia</span>
           </label>
+        <input className="sr-only" type="file" name="file" id="file" /> */}
 
           <button
             type="submit"

@@ -31,7 +31,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pl" className={`${lato.variable} ${pacifico.variable}`}>
-      <body className="relative bg-light-bkg text-light-text dark:bg-dark-bkg dark:text-dark-text dark:bg-opacity-95 max-w-6xl mx-auto border-x-2 border-light-accent dark:border-dark-accent min-h-screen ">
+      <body className="relative bg-light-bkg text-light-text dark:bg-dark-bkg dark:text-dark-text dark:bg-opacity-95 mx-auto border-x-2 border-light-accent dark:border-dark-accent min-h-dvh grid ">
         <Header />
         {children}
         <Footer />
