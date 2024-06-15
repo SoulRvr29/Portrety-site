@@ -4,31 +4,35 @@ import Gallery from "./sections/Gallery";
 import Order from "./sections/Order";
 import Prices from "./sections/Prices";
 import Contact from "./sections/Contact";
-import { motion, useInView } from "framer-motion";
-import { useRef, useEffect } from "react";
+import { motion, spring } from "framer-motion";
+import ScrollAnimation from "./components/ScrollAnimation";
 
 export default function Page() {
-  // const ref = useRef(null);
-  // const isInView = useInView(ref);
-
-  // useEffect(() => {
-  //   console.log("Element is in view: ", isInView);
-  // }, [isInView]);
-
   return (
     <main className=" pb-20 max-sm:pb-8 px-8 max-sm:px-4 flex flex-col gap-10 max-sm:gap-4">
       <Element name="Główna">
-        <h1 className="font-caveat text-center max-w-4xl mx-auto max-md:text-2xl pt-10 max-sm:pt-4">
+        <motion.h1
+          initial={{ scaleX: 0.8, opacity: 0 }}
+          animate={{ scaleX: 1, opacity: 1 }}
+          transition={{ type: "tween", duration: 0.5 }}
+          className="font-caveat text-center max-w-4xl mx-auto max-md:text-2xl pt-10 max-sm:pt-4"
+        >
           Sunt quis optio laudantium maxime eos harum illo, itaque perferendis
           quisquam facilis.
-        </h1>
+        </motion.h1>
       </Element>
-      <Gallery />
-      <motion.div>
+      <ScrollAnimation>
+        <Gallery />
+      </ScrollAnimation>
+      <ScrollAnimation>
         <Prices />
-      </motion.div>
-      <Order />
-      <Contact />
+      </ScrollAnimation>
+      <ScrollAnimation>
+        <Order />
+      </ScrollAnimation>
+      <ScrollAnimation>
+        <Contact />
+      </ScrollAnimation>
     </main>
   );
 }

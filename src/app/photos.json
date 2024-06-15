@@ -1,0 +1,39 @@
+[
+  {
+    "type": "persons",
+    "name": "osoby",
+    "quantity": 12,
+    "thumbnails": [
+      { "id": 1, "width": 600, "height": 836 },
+      { "id": 2, "width": 600, "height": 852 },
+      { "id": 3, "width": 600, "height": 854 },
+      { "id": 4, "width": 600, "height": 852 },
+      { "id": 5, "width": 600, "height": 850 },
+      { "id": 6, "width": 600, "height": 829 },
+      { "id": 7, "width": 600, "height": 427 },
+      { "id": 8, "width": 600, "height": 845 },
+      { "id": 9, "width": 600, "height": 841 },
+      { "id": 10, "width": 600, "height": 413 },
+      { "id": 11, "width": 600, "height": 855 },
+      { "id": 12, "width": 600, "height": 831 }
+    ]
+  },
+  {
+    "type": "animals",
+    "name": "zwierzęta",
+    "quantity": 5,
+    "thumbnails": [
+      { "id": 1, "width": 600, "height": 835 },
+      { "id": 2, "width": 600, "height": 426 },
+      { "id": 3, "width": 600, "height": 815 },
+      { "id": 4, "width": 600, "height": 812 },
+      { "id": 5, "width": 600, "height": 420 }
+    ]
+  },
+  {
+    "type": "sacred",
+    "name": "sakralne",
+    "quantity": 1,
+    "thumbnails": [{ "id": 1, "width": 600, "height": 1224 }]
+  }
+]

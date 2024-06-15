@@ -12,9 +12,9 @@ const BackToTop = () => {
   if (typeof window !== "undefined")
     window.addEventListener("scroll", scrollHandler);
   return (
-    <button className="btn-up max-w-6xl fixed justify-self-center bottom-0 w-full hidden z-20">
+    <button className="btn-up fixed justify-self-center bottom-0 w-full hidden z-20">
       <Link
-        className="absolute right-5 bottom-10 max-sm:bottom-5 mr-2 hover:text-accent hover:scale-125 transition-all uppercase "
+        className="absolute right-10 max-sm:right-5 bottom-10 max-sm:bottom-5 mr-2 hover:text-accent hover:scale-125 transition-all uppercase "
         to="Główna"
         activeClass="active"
         spy={true}

@@ -3,7 +3,6 @@ import DarkModeToggle from "./DarkModeToggle";
 import { Link } from "react-scroll";
 import { IoIosMenu, IoIosClose } from "react-icons/io";
 import { useState } from "react";
-import { motion } from "framer-motion";
 
 const NavLi = ({ name, setMenuOpen }) => {
   return (
@@ -25,7 +24,7 @@ const NavLi = ({ name, setMenuOpen }) => {
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <header className="sticky z-10 opacity-95 top-0 p-3 text-xl  dark:bg-dark-bkg bg-light-text text-light-bkg dark:text-light-bkg ">
+    <header className="sticky z-10 top-0 p-3 text-xl  dark:bg-dark-bkg bg-light-text text-light-bkg dark:text-light-bkg ">
       <div className="flex items-center justify-between max-w-6xl mx-auto">
         <div className="font-bold font-pacifico max-md:pb-1">portrety.pl</div>
 

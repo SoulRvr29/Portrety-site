@@ -43,7 +43,7 @@ const DarkModeToggle = () => {
   return (
     <button
       onClick={() => setDarkMode(!darkMode)}
-      title={!darkMode ? "ciemny motyw" : "jasny motyw"}
+      title="zmień motyw"
       className="hover:brightness-150"
     >
       {darkMode ? (
