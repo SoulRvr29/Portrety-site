@@ -17,7 +17,6 @@ const Gallery = () => {
 
   useEffect(() => {
     generatePhotosSrc();
-    console.log(actualData);
   }, [galleryType]);
 
   const generatePhotosSrc = () => {
@@ -43,7 +42,7 @@ const Gallery = () => {
   };
 
   return (
-    <Element name="Galeria" className="gallery">
+    <Element name="Galeria" className="gallery ">
       <h2>Galeria</h2>
 
       <div className="flex max-sm:text-3xl max-sm:gap-4 justify-center text-4xl font-caveat gap-8 pb-4 ">

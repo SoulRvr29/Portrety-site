@@ -44,7 +44,7 @@ const Contact = () => {
     <Element name="Kontakt">
       <h2>Kontakt</h2>
       <div className="flex max-md:flex-col max-w-md mx-auto justify-center text-3xl max-sm:text-xl gap-8 p-8 max-sm:p-4">
-        <div className="flex justify-center items-center border-2 rounded-xl py-2 px-3 border-light-text dark:border-dark-accent max-sm:w-fit mx-auto">
+        <div className="flex justify-center items-center border-2 rounded-xl py-2 px-3 gap-2 border-light-text dark:border-dark-accent max-sm:w-fit mx-auto">
           <FaPhone size={50} className="max-sm:size-7" />
           <p className="m-0 text-nowrap">(+48) 574 511 037</p>
         </div>

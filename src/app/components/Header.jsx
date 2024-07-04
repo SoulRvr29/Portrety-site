@@ -14,7 +14,7 @@ const NavLi = ({ name, setMenuOpen }) => {
       smooth={true}
       offset={-60}
       duration={300}
-      className=" transition-all hover:text-light-accent-2 cursor-pointera border-b-2 border-light-accent dark:border-dark-accent border-transparent dark:border-transparent cursor-pointer hover:border-light-accent-3 dark:hover:border-dark-accent-3 max-md:border-light-accent max-md:dark:border-dark-accent max-md:w-full text-center max-md:p-4 last:border-none max-md:hover:border-light-accent max-md:dark:hover:border-dark-accent max-md:hover:bg-light-accent-3 max-md:dark:hover:bg-dark-accent max-md:dark:bg-dark-bkg"
+      className=" transition-all hover:text-light-accent-2 cursor-pointera border-b-2 border-light-accent dark:border-dark-accent border-transparent dark:border-transparent cursor-pointer hover:border-light-accent-3 dark:hover:border-dark-accent-3 max-md:border-light-accent max-md:dark:border-dark-accent max-md:w-full text-center max-md:p-4 max-md:last:border-none max-md:hover:border-light-accent max-md:dark:hover:border-dark-accent max-md:hover:bg-light-accent-3 max-md:dark:hover:bg-dark-accent max-md:dark:bg-dark-bkg"
     >
       {name}
     </Link>
