@@ -1,26 +1,49 @@
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
 
-const resend = new Resend("re_C5h6hjcB_3bE68r33qbw9gAvqnieZc8We");
+export async function POST(req) {
+  try {
+    const { name, email, message } = await req.json();
+    console.log("Form data received:", { name, email, message });
 
-export default async function handler(req, res) {
-  if (req.method === "POST") {
-    const { name, email, message } = req.body;
+    // Set up Nodemailer transport with Interia's SMTP server
+    const transporter = nodemailer.createTransport({
+      host: "poczta.interia.pl",
+      port: 465, // or 465 for SSL/TLS
+      secure: true, // use true for 465
+      auth: {
+        user: process.env.EMAIL,
+        pass: process.env.EMAIL_PASSWORD,
+      },
+    });
 
-    try {
-      await resend.sendEmail({
-        from: process.env.EMAIL,
-        to: process.env.EMAIL,
-        subject: "New Contact Form Submission",
-        text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
-      });
+    console.log("Transporter configured with email:", process.env.EMAIL);
 
-      res.status(200).json({ success: true });
-    } catch (error) {
-      console.error(error);
-      res.status(500).json({ success: false });
-    }
-  } else {
-    res.setHeader("Allow", ["POST"]);
-    res.status(405).end(`Method ${req.method} Not Allowed`);
+    const mailOptions = {
+      from: process.env.EMAIL,
+      to: process.env.EMAIL,
+      subject: `Wiadomość od ${name}`,
+      text: `Adres email nadawcy: ${email}\n\n${message}`,
+    };
+
+    await transporter.sendMail(mailOptions);
+
+    console.log("Email sent successfully");
+    return new Response(JSON.stringify({ status: "success" }), {
+      status: 200,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  } catch (error) {
+    console.error("Error sending email:", error);
+    return new Response(
+      JSON.stringify({ status: "error", error: error.message }),
+      {
+        status: 500,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
   }
 }
